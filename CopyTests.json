@@ -1,0 +1,27 @@
+{"op": "CREATE", "key":"1", "val":"abc"}
+{"op": "CREATE", "key":"2", "val":"xyz"}
+{"op": "CREATE", "key":"4", "val":"456"}
+
+{"op": "COPY", "src_key":"3", "dst_key":"2"}
+{"op": "READ", "key":"1"}
+{"op": "READ", "key":"2"}
+
+{"op": "COPY", "src_key":"2", "dst_key":"3"}
+{"op": "READ", "key":"1"}
+{"op": "READ", "key":"2"}
+
+{"op": "COPY", "src_key":"2"}
+{"op": "COPY", "dst_key":"2"}
+{"op": "COPY"}
+{"op": "READ", "key":"1"} 
+{"op": "READ", "key":"2"} 
+
+{"op": "COPY", "src_key":"1", "dst_key":"2"}
+{"op": "READ", "key":"1"}
+{"op": "READ", "key":"2"}
+
+{"op": "READ", "key":"4"}
+{"op": "DELETE", "key":"4"}
+{"op": "READ", "key":"4"}
+{"op": "COPY", "src_key":"1", "dst_key":"4"}
+{"op": "COPY", "src_key":"4", "dst_key":"1"}

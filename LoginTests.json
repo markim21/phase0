@@ -1,0 +1,16 @@
+{"op": "LOGIN", "uid": "fbs"}
+
+{"op": "CREATE", "key":"1", "val":"123"}
+{"op": "READ", "key":"1"}
+{"op": "COPY", "src_key":"2", "dst_key":"3"}
+
+{"op": "LOGIN", "uid": "abc"}
+{"op": "READ", "key":"1"}
+
+{"op": "LOGOUT"}
+
+{"op": "CREATE", "key":"3", "val":"123"}
+{"op": "COPY", "src_key":"3", "dst_key":"1"}
+
+{"op": "LOGIN", "uid": "xyz"}
+{"op": "READ", "key":"1"}

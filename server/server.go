@@ -63,9 +63,6 @@ func process(requestData NetworkData) NetworkData {
 // operation.
 func doOp(request *Request, response *Response)  {
 	response.Status = FAIL
-	if request.Uid != currentUid && (request.Op != LOGOUT || request.Op != LOGIN) {
-		return response
-	}
 	response.Uid = request.Uid
 	switch request.Op {
 	case NOOP:
